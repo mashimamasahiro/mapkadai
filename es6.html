@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ function add(a, b){
+    return a+b;
+ };
+ console.log(add(3,4));
+
+ //=>が矢印っぽいのでアロー関数と呼ばれる
+ //reactの関数宣言においてアロー関数が使われることが多いため注意
+ //functionと長くかかなくて住むので好む人が多いがPHPではFunctionしかつえない
+ const add2 = (a, b) => {
+     return a+b;
+ };
+ console.log(add2(3,4));
+
+ const results = ['大吉', '吉', '凶'] ;
+
+ for(let i = 0; i < results.length; i++){
+    console.log(results[i])
+ }
+
+
+ //forEachはそれぞれを取り出して処理を行う関数
+ //()内は引数なのでresultsでなくてもOK。
+ results.forEach( function (result){
+    console.log(result);
+ });
+
+//forEachのアロー関数版は以下。
+results.forEach( (r) => {
+    console.log(r);
+ });
+</script>    
+</body>
+</html>
